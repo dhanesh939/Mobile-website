@@ -1,0 +1,121 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<title>
+Book Store
+</title>
+     <meta name="viewport" content="width=device-width, initial-scale=0.5">
+     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+     <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Muli" rel="stylesheet" type="text/css">
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div data-role="header" data-position="fixed" data-fullscreen="false" data-theme="b">
+	<div>
+    <img src="Img/logo_sm_trans_wht_tag@2x.png" alt="logo" width="175" height="75"/>
+    </div>
+    <br />
+<div data-role="navbar">
+	<ul>
+    	<li><a href="Home.htm" data-icon="home" data-transition="flow">Home</a></li>
+		<li><a href="Product.htm" data-icon="shop" data-transition="slideup" class="ui-btn-active ui-state-persist">Product</a></li>
+        <li><a href="About_us.htm" data-icon="info" data-transition="flip">About us</a></li>
+        <li><a href="Contact_Us.htm" data-icon="phone" data-transition="turn">Contact us</a></li>
+	</ul>
+</div>
+</div>
+<!--cont-->
+<ul data-role="listview" data-split-icon="shop" data-split-theme="d" data-inset="true">
+<li><a href="#">
+        <img src="product/Iphone-Black.jpg">
+        <h2>iPhone 5s, 16GB</h2>
+        <p> 4.0-inch Retina display<br /> A7 chip with M7 motion processor <br /> ID fingerprint sensor
+          <br /> 1080p HD video recording</p></a>
+        <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="turn">Buy Here</a>
+    </li>
+    <li><a href="#">
+        <img src="product/Iphone-Silver.jpg">
+        <h2>iPhone 5s, 32GB</h2>
+        <p>
+            4.0-inch Retina display<br /> 8 mega-pixel Camera
+          <br /> 1080p HD video recording
+        </p></a>
+        <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Buy Here</a>
+    </li>
+    <li><a href="#">
+        <img src="product/blackberry.jpg">
+        <h2>BlackBerry Z3</h2>
+        <p>
+            Qualcomm MSM8230 Snapdragon<br />8 GB, 1.5 GB RAM
+          <br /> Dual-core 1.2 GHz Krait 200
+        </p></a>
+        <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="turn">Buy Here</a>
+    </li>
+    <li><a href="#">
+        <img src="product/8s.jpg">
+        <h2>HTC Windows 8s</h2>
+        <p>
+            Corning Gorilla Glass<br />4 GB, 512 MB RAM
+            <br /> Microsoft Windows Phone 8
+        </p></a>
+        <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Buy Here</a>
+    </li>
+
+    <li><a href="#">
+        <img src="product/Nokia XL.jpg">
+        <h2>Nokia XL</h2>
+        <p>
+        IPS LCD capacitive touchscreen<br />Android OS, v4.1.2 (Jelly Bean)
+            <br /> Qualcomm MSM8225 Snapdragon
+        </p></a>
+        <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="turn">Buy Here</a>
+    </li>
+    
+    <li><a href="#">
+        <img src="product/Nokia_cell.jpg">
+        <h2>Nokia X</h2>
+        <p>
+        Nokia X platform 1.0 UI<br />Dual-core 1 GHz Cortex-A5
+            <br /> 4 GB, 512 MB RAM
+        </p></a>
+        <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="turn">Buy Here</a>
+    </li>
+
+    <li><a href="#">
+        <img src="product/Sony.jpg" />
+        <h2>Sony</h2>
+        <p>
+        TFT capacitive touchscreen<br />IP57 certified - dust and water resistant
+        <br />16 GB, 2 GB RAM<br />Quad-core 1.5 GHz Krait
+        </p>
+        </a>
+        <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="turn">Buy Here</a>
+    </li>
+
+<li><a href="#">
+        <img src="product/Sam5s.jpg">
+        <h2>Galaxy</h2>
+         <p>
+            Qualcomm Snapdragon 801 MSM8974-AC<br />Autofocus,Phase detection,Autofocus,
+        <br />Adreno 330<br />microSD, microSDHC, microSDXC up to 128 GB
+        </p>
+        </a>
+        <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="turn">Buy Here</a>
+    </li>
+
+</ul>
+<div data-role="popup" id="purchase" data-theme="a" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+    <h3>Buy Online</h3>
+    <p>You will be redirect to our secure site for any mobile device you purchase.</p>
+    <a href="#" data-role="button" data-rel="back" data-theme="b" data-icon="check" data-inline="true" data-mini="true">Buy: $710.99</a>
+    <a href="#" data-role="button" data-rel="back" data-inline="true" data-mini="true">Cancel</a>
+</div>
+<!--cont-->
+<div data-role="footer" data-position="fixed">
+	<h2>Copyright © The MobileStore |2014</h2>
+</div>
+</body>
+</html>

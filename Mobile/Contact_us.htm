@@ -1,0 +1,71 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<title>
+Mobile Site
+</title>
+     <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+     <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+     <link href="http://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Muli" rel="stylesheet" type="text/css">
+
+<!--DB-->
+<script type="text/javascript">  
+        var Database_Name = 'UserData';
+        var Version = 1.0;
+        var Text_Description = 'Web SQL';  
+        var Database_Size = 4 * 1024 * 1024;  
+        var dbObj = openDatabase(Database_Name, Version, Text_Description, Database_Size);  
+        dbObj.transaction(function (tx) {  
+            tx.executeSql('CREATE TABLE IF NOT EXISTS userinfo(userName,userEmail,userPhone,userMessage)');  
+        });
+        function Insert() {
+            var name = document.getElementById("txtname").value;
+            var email = document.getElementById("txtemail").value;
+            var phone = document.getElementById("txtphone").value;
+            var message = document.getElementById("txtmessage").value;
+            dbObj.transaction(function (tx) {
+                tx.executeSql('Insert into userinfo(userName,userEmail,userPhone,userMessage) values ("' + name + '","' + email + '","' + phone + '","' + message + '")');
+            });
+        }
+
+    </script> 
+<!-- -->
+</head>
+<body>
+<div data-role="header" data-position="fixed" data-fullscreen="false" data-theme="b">
+	<div>
+    <img  src="Img/logo_sm_trans_wht_tag@2x.png" alt="logo" width="175" height="75"/>
+    </div>
+    <br />
+<div data-role="navbar">
+	<ul>
+        <li><a href="Home.htm" data-icon="home" data-transition="flow">Home</a></li>
+		<li><a href="Product.htm" data-icon="shop" data-transition="slideup">Product</a></li>
+        <li><a href="About_us.htm" data-icon="info" data-transition="flip">About us</a></li>
+        <li><a href="Contact_Us.htm" data-icon="phone" data-transition="turn" class="ui-btn-active ui-state-persist">Contact us</a></li>
+	</ul>
+</div>
+</div>
+<!--content-->
+<p>Please provide your valuable feedback to us</p>
+        <div data-role="content" data-theme="d">    
+        <form action="#">
+          Name: <input type="text" value="" placeholder="Name" id="txtname" required/><br>
+          E-mail: <input type="email" value="" placeholder="E-mail" id="txtemail" required/><br>
+          Phone: <input type="tel" value="" placeholder="Cell" id="txtphone" required/><br>
+          Message:<br>
+          <textarea style="height:100px;" placeholder="Enter your message here..." id="txtmessage" required></textarea> <br /> 
+          <button id="btnInsert" onclick="Insert()" class="btn">Send</button>
+          <input type="reset" value="Reset" name="submit" class="btn">
+         </form>
+        </div>
+<!--content-->
+<div data-role="footer" data-position="fixed">
+	<h2>Copyright © The MobileStore |2014</h2>
+</div>
+</body>
+</html>
